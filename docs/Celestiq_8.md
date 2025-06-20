@@ -188,7 +188,7 @@ vec2 sobol2D(uint index, uint bounce, uint scramble) {
 
 如果你的渲染器出现了下面这种多光斑/结构性伪影（下图只有一个面光源）：
 
-<img src="assets\C8_0.png" style="zoom:50%;" />
+<img src="\assets\C8_0.png" style="zoom:50%;" />
 
 基本可以确定是随机数生成出了问题，存在某个或多个维度出现了混杂，说实话很难排查具体是哪里的问题，要想彻底解决，需要对每一个需要随机决策的维度都单独做去相关，那个就很复杂了。我也是尝试了很多版，才确定了上面的可用且比较简单的版本
 
@@ -393,4 +393,4 @@ for (uint bounce = 0; bounce < MAX_BOUNCES; ++bounce) {
 ## 构建
 手动创建一个经典的盒子场景，效果还是不错的。但帧数骤降至3到4帧，均匀采样收敛速度很慢，积累大概100帧才勉强可以看，后续细微的噪点也很难消除，这和帧间积累的算法也有关系。下一节中我们会大幅改进这一点
 
-<img src="assets\C8_1.png" style="zoom:50%;" />
+<img src="\assets\C8_1.png" style="zoom:50%;" />

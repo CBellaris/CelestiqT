@@ -285,4 +285,4 @@ r_pipelineLayout_compute = std::make_unique<pipelineLayout>(pipelineLayoutCreate
 最后修改计算着色器，测试整个场景。在`Scene::initScene()`中，创建了一个立方体、一个球和一个平面，并分别指定了不同的材质颜色。在着色器中，发出光线，与整个场景遍历求交，返回交点的材质颜色，具体的着色器代码实现很清晰，这里就不贴了
 
 构建可以看到，光线成功索引到了正确的材质颜色，帧数相比光栅化略低，目测60帧（在下一节中会详细对比）。光追管线只要理解了整个场景的构建方法，在着色器中可以随机访问所有场景信息，渲染的具体实现就可以非常清晰
-<img src="assets\C5_0.png" style="zoom:50%;" />
+<img src="\assets\C5_0.png" style="zoom:50%;" />

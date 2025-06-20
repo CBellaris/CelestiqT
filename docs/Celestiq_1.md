@@ -5,7 +5,7 @@ vulkan的话复杂是肯定的，最开始接触时很容易被其中多而杂�
 
 我这里的基础框架基于glfw+ImGui，窗口创建和基础UI布局的代码基本来自ImGui官方示例，在这个基础上添加自定义渲染流程，构建运行的话效果大概是这样：
 
-<img src="assets\C1_0.png" style="zoom:50%;" />
+<img src="\assets\C1_0.png" style="zoom:50%;" />
 
 可以拖动UI窗口改变布局，吸附窗口等，渲染视口的大小会同步改变
 
@@ -360,8 +360,8 @@ CPU 等待 Fence 完成，保证 GPU 已经完成这一帧渲染
 ## 构建
 至此整个框架应该比较清晰了，运行程序会是这样：
 
-<img src="assets\C1_1.png" style="zoom:50%;" />
+<img src="\assets\C1_1.png" style="zoom:50%;" />
 
 因为没设置默认布局，拖动左上角叠在一起的窗口调整，配置会被写在imgui.ini，窗口位置就被保存到下次启动了
 
-<img src="assets\C1_2.png" style="zoom:50%;" />
+<img src="\assets\C1_2.png" style="zoom:50%;" />

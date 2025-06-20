@@ -20,7 +20,7 @@
 
 这种层级结构避免了重复构建和上传相同几何体的 BVH，只需变换即可复用。和上一章的object层级是一样的，之前每个Mesh都对应其变换矩阵和材质id，而一个Mesh实际上可以对应不同的变换矩阵，就创建了不同的实例
 
-<img src="assets\C6_0.png" style="zoom:50%;" />
+<img src="\assets\C6_0.png" style="zoom:50%;" />
 
 
 ## 算法实现
@@ -331,4 +331,4 @@ traceTLAS_stack(tlasRoot, rayOrig, rayDir, minT, hitColor);
 ## 构建
 添加了一个显示帧率的ui，可以看到，基本上顶满了上限120帧在跑（取决于显示器），比上一节直接遍历场景高了一倍左右。这里只有一千左右个面，当场景变得更加复杂时，提升会更加明显
 
-<img src="assets\C6_1.png" style="zoom:50%;" />
+<img src="\assets\C6_1.png" style="zoom:50%;" />

@@ -186,8 +186,8 @@ LightSample sampleDirectionalLight(vec2 Xi)
 ## 构建
 添加一个玻璃球和方向光，效果如下：
 
-<img src="assets\C10_0.png" style="zoom:50%;"/>
-<img src="assets\C10_1.png" style="zoom:50%;"/>
+<img src="\assets\C10_0.png" style="zoom:50%;"/>
+<img src="\assets\C10_1.png" style="zoom:50%;"/>
 
 上图粗糙度为0.2，下图为最小值（0.04），折射率1.5
 

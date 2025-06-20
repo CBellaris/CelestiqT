@@ -2,7 +2,7 @@
 前面的准备过后，应该足够开始实现一个最简单的软路径追踪了（应该），vulkan的API使用其实还有很多细节可以帮助优化性能，但开发能力有限，目前还是专注主线
 
 需要先理解路径追踪的原理，并且有一个整体的概念，这个不属于本教程范畴，我个人感觉，只要学过一遍LearnOpenGL，深刻理解渲染方程，然后看看Games101 https://www.bilibili.com/video/BV1X7411F744 里的Ray-Tracing章节，基本就OK了，最后的算法就一张图：
-<img src="assets\C4_0.png" style="zoom:50%;" />
+<img src="\assets\C4_0.png" style="zoom:50%;" />
 
 
 ## 总览
@@ -138,4 +138,4 @@ void transitionImageLayout(VkCommandBuffer cmd, const std::vector<renderableImag
 ## 构建
 构建程序可以看到，像素被写入了渐变的颜色
 
-<img src="assets\C4_1.png" style="zoom:50%;" />
+<img src="\assets\C4_1.png" style="zoom:50%;" />

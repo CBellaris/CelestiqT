@@ -40,7 +40,7 @@ vec3 ImportanceSampleGGX(vec2 Xi, vec3 N, float roughness)
 }
 ```
 
-<img src="assets\C9_0.png" style="zoom:50%;" />
+<img src="\assets\C9_0.png" style="zoom:50%;" />
 
 基本上就是集中在上图的紫色区域中采样，粗糙度越大，紫色扩散范围越大，替换之前的均匀半球采样：
 ```glsl
@@ -146,7 +146,7 @@ $D(\mathbf{H})\cdot\cos\theta_h,(\theta_h=\mathbf{N} \cdot \mathbf{H})$才是概
 
 其定义的值就是朝某个方向上的微表面面积，例如：
 
-<img src="assets\C9_1.png" style="zoom:50%;" />
+<img src="\assets\C9_1.png" style="zoom:50%;" />
 
 直观上来理解，这个斜着的微表面，明显从归一化的角度来讲，其面积有点”虚标“了，乘个$(\mathbf{N} \cdot \mathbf{H})$给它缩小一点
 
@@ -228,7 +228,7 @@ $$
 
 这个公式也是一般对于方向角定义的直观理解，就是一小块矩形的面积：
 
-<img src="assets\C9_2.jpg"/>
+<img src="\assets\C9_2.jpg"/>
 
 **面积微元表达式**
 
@@ -296,7 +296,7 @@ else                         // --- 漫反射分支：余弦加权 ---
 ## 直接灯光采样
 直接灯光采样，也叫Next Event Estimation (NEE)（下一事件估计）是一种将直接光照项显式采样的技术，给个传送门：https://www.bilibili.com/video/BV1X7411F744/?spm_id_from=333.788.videopod.episodes&vd_source=fe7a9ee6657422d709d30bf6284f347f&p=16 大概1h左右开始有提到，视频里的图示很清晰了，其中的：
 
-<img src="assets\C9_3.png" style="zoom:50%;"/>
+<img src="\assets\C9_3.png" style="zoom:50%;"/>
 
 同样是一个测度转换，不过这个严谨推导就复杂很多了，Physically Based Rendering中也是一笔带过，所以就从几何直观上理解一下算了
 
@@ -309,7 +309,7 @@ NEE引入了新的采样分布，但和上面的漫反射/高光可以采用简�
 
 如果渲染时出现了"fireflies"，即不合理的高亮像素，例如下图右上角，MIS策略有误可能是部分原因：
 
-<img src="assets\C9_4.png" style="zoom:50%;"/>
+<img src="\assets\C9_4.png" style="zoom:50%;"/>
 
 先为NEE添加几个函数，用于替代之前的光线求交：
 ```glsl
@@ -400,8 +400,8 @@ pdfLight = max(pdfLight, 1e-4);
 
 
 
-<img src="assets\C9_6.png" style="zoom:50%;"/>
-<img src="assets\C9_7.png" style="zoom:50%;"/>
+<img src="\assets\C9_6.png" style="zoom:50%;"/>
+<img src="\assets\C9_7.png" style="zoom:50%;"/>
 
 其中的$N$代表当前方法采样的光线根数，目前都是1，所以直接忽略。下标$s$为当前采样方法，我们有两种：直接光线采样和混合采样，所以$M$为2，$p_s(x_i)$即当前采样方法的PDF。看向权重的计算方式，意味着在执行当前采样时，需要额外计算其他所有采样的PDF，用于计算权重，对应代码：
 
@@ -449,9 +449,9 @@ float roughness = max(mat.roughness, MIN_ROUGHNESS);
 
 采样效率较上一节最基础的均匀半球采样，可能提升了大概50-100倍，由于采样效率整一个大提升，我这边降低参数到`MAX_BOUNCES = 4，SAMPLES_PER_PIXEL = 2`，可以换取一些帧数，从4帧提升至电竞帧率30帧（甚至还提高了一些球体的细分数），但依旧能在1秒以内就收敛到一个不错的画面
 
-<img src="assets\C9_8.png" style="zoom:50%;"/>
+<img src="\assets\C9_8.png" style="zoom:50%;"/>
 
-<img src="assets\C9_9.png" style="zoom:50%;"/>
+<img src="\assets\C9_9.png" style="zoom:50%;"/>
 
 
 ## 关于MIS权重的误解
@@ -477,7 +477,7 @@ throughput *= f_bsdf * NdotL2 * misW / pdfCombined;
 
 NEE对于低粗糙度物体+大光源采样效率比较低，我后面仔细观察金属球上的面光反光，发现收敛速度确实偏慢，不过不是很明显，所以忽略了这一点：
 
-<img src="assets\C9_11.png" style="zoom:50%;"/>
+<img src="\assets\C9_11.png" style="zoom:50%;"/>
 
 
 如果加上BSDF sampling碰巧撞上光源的采样路线的话，那么如何计算此时的MIS权重呢？首先需要记录下NEE采样的哪个光源，例如光源A，在下一次弹跳中，若光源碰巧撞上了光源A，那么按照上文的方法计算MIS权重。其他情况例如光线击中了光源B（或其他物体），那么pdfLight即采样A光源的函数采样此时的光线的概率是多少？采样A光源的函数不可能采样到B光源，所以为0，MIS权重为1

@@ -388,4 +388,4 @@ void main() {
 ```
 运行程序，按tab切换锁定，可以使用wasd和鼠标围绕观察立方体：
 
-<img src="assets\C2_0.png" style="zoom:50%;" />
+<img src="\assets\C2_0.png" style="zoom:50%;" />

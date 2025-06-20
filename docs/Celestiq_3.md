@@ -128,4 +128,4 @@ dependency.dstAccessMask = VK_ACCESS_SHADER_READ_BIT;
 
 构建可以看到下面的效果，世界坐标被渲染，缺少深度剔除。想要开启的话，需要在创建G-buffer管线时设置，并且向frameBuffer中添加深度附件，对于教程后面的部分没什么必要，就不浪费时间了
 
-<img src="assets\C3_0.png" style="zoom:50%;" />
+<img src="\assets\C3_0.png" style="zoom:50%;" />

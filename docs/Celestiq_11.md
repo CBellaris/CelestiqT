@@ -84,7 +84,7 @@ $I_{RIS}$不变，这样，我们最终相当于只采样了一根光线，但�
 ## WRS与时空重用
 WRS原理在各个教程中解释的都比较清楚了，这里只贴一下算法：
 
-<img src="assets\C11_0.png" style="zoom:50%;"/>
+<img src="\assets\C11_0.png" style="zoom:50%;"/>
 
 这里的$generate X_i$就是从分布$p(x)$采样，下一行中的$W_{X_i}$即$\frac{1}{p(x)}$。比起最简单的WRS，还多了一个Confidence weight，核心思路就是在重用时，为更“可靠”的被重用像素分配更高的权重，可以先忽略。先来举个例子先说明如何进行“重用”
 

@@ -241,4 +241,4 @@ if (hitInfo.hit) {
 
 效果如下：
 
-<img src="assets\C7_0.png" style="zoom:50%;" />
+<img src="\assets\C7_0.png" style="zoom:50%;" />

@@ -27,27 +27,27 @@
 ## 效果预览
 经典盒子场景：
 
-<img src="assets\C0_0.png" style="zoom:50%;" />
+<img src="\assets\C0_0.png" style="zoom:50%;" />
 
 PBR材质：
 
-<img src="assets\C0_1.png" style="zoom:50%;" />
+<img src="\assets\C0_1.png" style="zoom:50%;" />
 
 Sponza Palace：
 
-<img src="assets\C0_2.png" style="zoom:50%;" />
+<img src="\assets\C0_2.png" style="zoom:50%;" />
 
-<img src="assets\C0_3.png" style="zoom:50%;" />
+<img src="\assets\C0_3.png" style="zoom:50%;" />
 
 不同软硬的太阳光：
 
-<img src="assets\C0_4.png" style="zoom:50%;" />
+<img src="\assets\C0_4.png" style="zoom:50%;" />
 
-<img src="assets\C0_5.png" style="zoom:50%;" />
+<img src="\assets\C0_5.png" style="zoom:50%;" />
 
 磨砂玻璃：
 
-<img src="assets\C0_6.png" style="zoom:50%;" />
+<img src="\assets\C0_6.png" style="zoom:50%;" />
 
-<img src="assets\C0_7.png" style="zoom:50%;" />
+<img src="\assets\C0_7.png" style="zoom:50%;" />
 
