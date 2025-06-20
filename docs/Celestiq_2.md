@@ -389,3 +389,8 @@ void main() {
 运行程序，按tab切换锁定，可以使用wasd和鼠标围绕观察立方体：
 
 <img src="\assets\C2_0.png" style="zoom:50%;" />
+
+## 代码存档
+::: tip 代码下载
+[点击下载本章的代码存档](/downloads/code2.zip)
+:::

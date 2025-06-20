@@ -195,7 +195,7 @@ ImGUI: https://github.com/ocornut/imgui, 这个不用编译，clone到./vender�
 
 然后是vulkan的安装，https://vulkan.lunarg.com/sdk/home 下载安装Windows SDK，将安装路径下的 { 你的安装路径 }/Lib/vulkan-1.lib 复制到 ./vender/vulkan/lib，安装路径下的 { 你的安装路径 }/include 全部复制到 ./vender/vulkan/include 即可，对应上面任务中的描述
 
-至此项目就初步创建成功了，从代码存档中复制./App ./res ./src三个文件夹，运行构建任务就可以了
+至此项目就初步创建成功了，从代码存档（在文章最后）中复制./App ./res ./src三个文件夹，运行构建任务就可以了
 
 > ./App是创建窗口和vulkan相关的底层封装的代码，而./src是渲染逻辑实际所在的代码，后面会依次介绍到
 
@@ -365,3 +365,8 @@ CPU 等待 Fence 完成，保证 GPU 已经完成这一帧渲染
 因为没设置默认布局，拖动左上角叠在一起的窗口调整，配置会被写在imgui.ini，窗口位置就被保存到下次启动了
 
 <img src="\assets\C1_2.png" style="zoom:50%;" />
+
+## 代码存档
+::: tip 代码下载
+[点击下载本章的代码存档](/downloads/code1.zip)
+:::

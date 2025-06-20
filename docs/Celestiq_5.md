@@ -286,3 +286,8 @@ r_pipelineLayout_compute = std::make_unique<pipelineLayout>(pipelineLayoutCreate
 
 构建可以看到，光线成功索引到了正确的材质颜色，帧数相比光栅化略低，目测60帧（在下一节中会详细对比）。光追管线只要理解了整个场景的构建方法，在着色器中可以随机访问所有场景信息，渲染的具体实现就可以非常清晰
 <img src="\assets\C5_0.png" style="zoom:50%;" />
+
+## 代码存档
+::: tip 代码下载
+[点击下载本章的代码存档](/downloads/code5.zip)
+:::

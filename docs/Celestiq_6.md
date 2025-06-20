@@ -332,3 +332,8 @@ traceTLAS_stack(tlasRoot, rayOrig, rayDir, minT, hitColor);
 添加了一个显示帧率的ui，可以看到，基本上顶满了上限120帧在跑（取决于显示器），比上一节直接遍历场景高了一倍左右。这里只有一千左右个面，当场景变得更加复杂时，提升会更加明显
 
 <img src="\assets\C6_1.png" style="zoom:50%;" />
+
+## 代码存档
+::: tip 代码下载
+[点击下载本章的代码存档](/downloads/code6.zip)
+:::

@@ -139,3 +139,8 @@ void transitionImageLayout(VkCommandBuffer cmd, const std::vector<renderableImag
 构建程序可以看到，像素被写入了渐变的颜色
 
 <img src="\assets\C4_1.png" style="zoom:50%;" />
+
+## 代码存档
+::: tip 代码下载
+[点击下载本章的代码存档](/downloads/code4.zip)
+:::

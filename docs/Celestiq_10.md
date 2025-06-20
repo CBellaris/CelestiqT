@@ -278,3 +278,10 @@ https://github.com/assimp/assimp 同样是clone到./vender
 
 > **WIP**   *如果对这部分存在疑问，可以联系我补全*
 
+## 代码存档
+::: tip 代码下载
+[点击下载本章的代码存档](/downloads/code10.zip)
+:::
+
+贴图、天空盒图片和Sponza Palace模型文件等较大，请按需下载：
+[assets](/downloads/assets.zip)
