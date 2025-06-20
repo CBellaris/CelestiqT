@@ -473,7 +473,7 @@ throughput *= f_bsdf * NdotL2 * misW / pdfCombined;
 因此MIS权重的计算错误就很清晰了，第一：只有当真正的采样结束时，才需要乘上MIS权重，因此NEE部分的代码是正确的，BSDF sampling中：`throughput *= f_bsdf * NdotL2 / pdfCombined;` 删掉misW即可。第二：何时考虑BSDF sampling的MIS权重呢？答案是不需要，我这里由于NEE效果太好，直接删除了BSDF sampling碰巧撞上光源的采样方法，因此实际上所有的光路都来自NEE
 
 按道理来说BSDF sampling碰巧撞上光源的采样路线也是有必要的，下图展示了两种采样方法的优劣：
-<img src="assets\C9_10.png"/>
+<img src="\assets\C9_10.png"/>
 
 NEE对于低粗糙度物体+大光源采样效率比较低，我后面仔细观察金属球上的面光反光，发现收敛速度确实偏慢，不过不是很明显，所以忽略了这一点：
 
