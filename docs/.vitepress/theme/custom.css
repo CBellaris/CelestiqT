@@ -1,0 +1,14 @@
+/**
+ * 修复 markdown-it-mathjax3 渲染问题
+ */
+
+/*
+  核心修复：
+  选择那些 *不带* display="true" 属性的 mjx-container，
+  也就是所有的行内公式，然后将它们设置为行内块元素。
+*/
+mjx-container:not([display="true"]) {
+  display: inline-block;
+  vertical-align: -0.075em; /* 微调垂直对齐，使其与文本基线更协调 */
+  padding: 0 0.2em; /* 增加一点点左右边距，避免与文字贴太近 */
+}
